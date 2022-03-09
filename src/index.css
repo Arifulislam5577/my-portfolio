@@ -3,6 +3,71 @@
 @tailwind utilities;
 
 body {
-  background-color: #eee9f2;
   font-family: "Work Sans", sans-serif;
+  background: rgba(15, 23, 42);
+}
+.hero {
+  background: url(../public/images/code.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(15, 23, 42);
+  display: block;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.hero-text {
+  top: 25%;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #facc15;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.project-img img {
+  height: 15rem;
+  width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
 }
